@@ -39,15 +39,6 @@ class BookingService {
         return matchedBookings.firstOrNull()
     }
 
-//    fun reserveSeat(seat: Seat, performance: Performance, customerName: String) : Booking {
-//        val booking = Booking(0,customerName)
-//        booking.seat = seat
-//        booking.performance = performance
-//
-//        bookingRepository.save(booking)
-//        return booking
-//    }
-
     fun reserveSeat(sid: Long, pid: Long, customerName: String) : Booking {
         val booking = Booking(0,customerName)
         booking.seat = seatRepository.findById(sid).get()

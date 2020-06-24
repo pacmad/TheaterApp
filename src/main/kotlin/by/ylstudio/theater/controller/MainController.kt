@@ -64,7 +64,6 @@ class MainController {
 
     @RequestMapping("booking", method = [RequestMethod.POST])
     fun bookASeat(sid: String, pid: String, customerName: String, bean: CheckAvailabilityBackingBean): ModelAndView {
-//        val booking = bookingService.reserveSeat(bean.seat!!, bean.performance!!, bean.customerName)
         val booking = bookingService.reserveSeat(sid.toLong(), pid.toLong(), customerName)
         return ModelAndView("bookingConfirmed", "booking", booking)
     }
