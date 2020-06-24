@@ -9,6 +9,7 @@ JDK version: 8.
 JPA Repository.
 Build tool: Apache Maven 3.6+.
 Web server: Apache Tomcat.
+Thymeleaf
 Application container: Spring IoC. Spring Framework +.
 Spring configured via Java config.
 Database: H2
